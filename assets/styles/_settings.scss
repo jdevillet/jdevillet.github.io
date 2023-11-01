@@ -1,0 +1,71 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
+$font-color-black: rgb(22, 22, 22);
+$font-color-white: rgb(238, 238, 238);
+$font-color-desc: rgba(32, 32, 32, 0.596);
+$background-choice:rgba(219, 219, 219, 0.479);
+$main-color:rgb(114, 0, 245);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Raleway', Verdana;
+
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+/*******************************/
+
+
+
+.bold{
+  font-weight: 700;
+}
+
+.description {
+ color: $font-color-desc;
+}
+
+.text-center{
+  text-align: center;
+}
+
+
+
