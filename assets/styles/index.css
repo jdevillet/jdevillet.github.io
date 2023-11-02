@@ -60,9 +60,10 @@ h6 {
 }
 
 .page-container {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   margin: 0 2rem;
 }
 .page-container .header {
@@ -72,8 +73,19 @@ h6 {
   justify-items: center;
   min-height: 10rem;
 }
+@media screen and (max-width: 767px) {
+  .page-container .header {
+    margin-top: 2rem;
+  }
+}
 .page-container .header h1 {
   font-size: 3.5rem;
+}
+@media screen and (max-width: 767px) {
+  .page-container .header h1 {
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
 }
 .page-container .header p {
   font-size: 1.3rem;
@@ -119,7 +131,20 @@ h6 {
 .page-container .plans-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  min-width: 100%;
+  max-width: 100%;
   margin: 3rem 0;
+}
+@media screen and (max-width: 940px) {
+  .page-container .plans-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+    margin: 1rem 0;
+  }
 }
 .page-container .plans-container .plan-tile {
   min-width: 17rem;
@@ -127,6 +152,12 @@ h6 {
   margin: 0 1rem;
   box-shadow: 0 4px 11px 2px rgba(0, 0, 0, 0.062);
   border-radius: 10px;
+}
+@media screen and (max-width: 940px) {
+  .page-container .plans-container .plan-tile {
+    min-width: 90%;
+    max-width: 90%;
+  }
 }
 .page-container .plans-container .plan-tile .plan {
   min-height: 100%;
@@ -148,6 +179,12 @@ h6 {
   margin: 0 auto;
   min-height: 3rem;
 }
+@media screen and (max-width: 940px) {
+  .page-container .plans-container .plan-tile .plan .pricing-part .description {
+    max-width: 50ch;
+    min-height: auto;
+  }
+}
 .page-container .plans-container .plan-tile .plan .pricing-part .price {
   display: flex;
   justify-content: center;
@@ -157,12 +194,23 @@ h6 {
   font-size: 3rem;
   position: relative;
 }
+@media screen and (max-width: 360px) {
+  .page-container .plans-container .plan-tile .plan .pricing-part .price #price {
+    font-size: 2rem;
+  }
+}
 .page-container .plans-container .plan-tile .plan .pricing-part .price #price::before {
   content: "$";
   position: absolute;
   font-size: 1.7rem;
   top: 10px;
   left: -16px;
+}
+@media screen and (max-width: 360px) {
+  .page-container .plans-container .plan-tile .plan .pricing-part .price #price::before {
+    font-size: 1rem;
+    left: -10px;
+  }
 }
 .page-container .plans-container .plan-tile .plan .pricing-part .price p:not(#price) {
   font-size: 0.7rem;

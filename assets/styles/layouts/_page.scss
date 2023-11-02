@@ -1,7 +1,8 @@
 .page-container {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   margin: 0 2rem;
 
   //************************* Header
@@ -12,9 +13,17 @@
     text-align: center;
     justify-items: center;
     min-height: 10rem;
+    @media screen and (max-width: 767px) {
+          margin-top: 2rem;
+    }
 
     h1 {
       font-size: 3.5rem;
+
+      @media screen and (max-width: 767px) {
+          font-size: 2.8rem;
+          line-height: 3rem;
+      }
     }
 
     p {
@@ -67,7 +76,19 @@
   .plans-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    min-width: 100%;
+    max-width: 100%;
     margin: 3rem 0;
+
+    @media screen and (max-width: 940px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 1rem;
+      margin: 1rem 0;
+    }
 
     .plan-tile {
       min-width: 17rem;
@@ -75,6 +96,11 @@
       margin: 0 1rem;
       box-shadow: 0 4px 11px 2px rgba(0, 0, 0, 0.062);
       border-radius: 10px;
+
+      @media screen and (max-width: 940px) {
+        min-width: 90%;
+        max-width: 90%;
+      }
 
       .plan {
         min-height: 100%;
@@ -95,6 +121,11 @@
             max-width: 25ch;
             margin: 0 auto;
             min-height: 3rem;
+
+            @media screen and (max-width: 940px) {
+              max-width: 50ch;
+              min-height: auto;
+            }
           }
           .price {
             display: flex;
@@ -104,12 +135,22 @@
             #price {
               font-size: 3rem;
               position: relative;
+
+              @media screen and (max-width: 360px) {
+        font-size: 2rem ;
+              }
+
               &::before {
                 content: "$";
                 position: absolute;
                 font-size: 1.7rem;
                 top: 10px;
                 left: -16px;
+
+                @media screen and (max-width: 360px) {
+          font-size: 1rem;
+          left: -10px;
+                }
               }
             }
             p:not(#price) {
