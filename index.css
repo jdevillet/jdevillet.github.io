@@ -254,6 +254,7 @@ header .first-sight .main-button:after {
   top: -0.1rem;
   left: 85%;
   transition: 0.3s ease-out;
+  
 }
 header .first-sight .main-button:hover {
   text-indent: -1.6rem;
