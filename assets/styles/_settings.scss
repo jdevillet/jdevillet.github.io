@@ -1,29 +1,31 @@
+@font-face {
+  font-family: "rubik";
+  src: url(../fonts/Rubik-VariableFont_wght.ttf);
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-
-
-$font-color-black: rgb(22, 22, 22);
-$font-color-white: rgb(238, 238, 238);
-$font-color-desc: rgba(32, 32, 32, 0.596);
-$background-choice:rgba(219, 219, 219, 0.479);
-$main-color:rgb(114, 0, 245);
+$font1: "rubik", Verdana;
+$black1: rgb(23, 20, 21);
+$black2: rgb(47, 47, 47);
+$white1: rgb(241, 241, 241);
+$white2: rgb(230, 230, 230);
+$redTheme: rgb(255, 27, 39);
+$lighterRed: rgba(253, 99, 106, 0.858);
 
 *,
 *::before,
-*::after {
+*::after,
+*:visited {
   box-sizing: border-box;
-  font-family: 'Raleway', Verdana;
-
-}
-* {
+  text-decoration: none;
+  list-style: none;
+  color: $white1;
   margin: 0;
+  scroll-behavior: smooth;
 }
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  
-  
 }
 img,
 picture,
@@ -37,7 +39,7 @@ input,
 button,
 textarea,
 select {
-  font: inherit;
+  font-family: $font1;
 }
 p,
 h1,
@@ -45,8 +47,11 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  overflow-wrap: break-word;
+h6,
+li,
+a {
+  text-wrap: pretty;
+  font-family: $font1;
 }
 #root,
 #__next {
@@ -54,19 +59,34 @@ h6 {
 }
 /*******************************/
 
-
-
-.bold{
-  font-weight: 700;
+.bold {
+  font-weight: 900;
 }
 
-.description {
- color: $font-color-desc;
-}
-
-.text-center{
+.centered {
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 0 auto;
 }
 
+.icon {
+  color: $black1;
+  font-size: 1.4rem;
+}
 
+.moreBtn {
+  background: $black1;
+  color: $white1;
+  padding: 0.5rem 1.2rem;
+  border-radius: 99rem;
+  transition: 0.2s;
 
+  &:hover {
+    padding: 0.6rem 1.4rem;
+    color: $black1;
+    background: $white1;
+    font-size: 1.1rem;
+  }
+}
