@@ -162,14 +162,15 @@ header .section1 {
   background: rgb(47, 47, 47);
   padding: 5rem 0 5rem 0;
 }
-@media only screen and (max-height: 925px) {
+@media only screen and (max-height: 500px) {
   header .section1 {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 55% 45%;
+    row-gap: 3rem;
     grid-template-areas: "a1 a2" "a1 a3";
-    padding: 0;
+    padding: 0 0 0;
     margin: 0;
-    align-content: space-evenly;
+    align-content: center;
   }
 }
 @media screen and (max-width: 768px) {
@@ -196,7 +197,7 @@ header .section1 #logo {
     width: 30rem;
     min-height: 5rem;
     height: 13rem;
-    margin: 0 0 0 3rem;
+    margin: 0 0 0 0;
   }
 }
 @media screen and (max-width: 768px) {
@@ -345,4 +346,4 @@ header .section1 #scroll-down:hover {
   header .section1 #scroll-down {
     display: none;
   }
-}/*# sourceMappingURL=index.css.map */
+}
