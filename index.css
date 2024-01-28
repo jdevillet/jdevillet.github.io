@@ -102,6 +102,11 @@ header #navbar {
   position: fixed;
   z-index: 999;
 }
+@media only screen and (max-height: 925px) {
+  header #navbar {
+    display: none;
+  }
+}
 @media screen and (max-width: 768px) {
   header #navbar {
     display: none;
@@ -157,6 +162,16 @@ header .section1 {
   background: rgb(47, 47, 47);
   padding: 5rem 0 5rem 0;
 }
+@media only screen and (max-height: 925px) {
+  header .section1 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "a1 a2" "a1 a3";
+    padding: 0;
+    margin: 0;
+    align-content: space-evenly;
+  }
+}
 @media screen and (max-width: 768px) {
   header .section1 {
     background: rgb(47, 47, 47);
@@ -174,6 +189,15 @@ header .section1 #logo {
   height: 15rem;
   border-radius: 1rem;
   background: url(/assets/img/logogarage.webp) center/cover;
+  grid-area: a1;
+}
+@media only screen and (max-height: 925px) {
+  header .section1 #logo {
+    width: 30rem;
+    min-height: 5rem;
+    height: 13rem;
+    margin: 0 0 0 2rem;
+  }
 }
 @media screen and (max-width: 768px) {
   header .section1 #logo {
@@ -206,6 +230,7 @@ header .section1 p {
   margin: 0 3rem;
   min-width: 15ch;
   max-width: 100%;
+  grid-area: a2;
 }
 @media screen and (max-width: 1200px) {
   header .section1 p {
@@ -229,6 +254,11 @@ header .section1 .welcome-image {
   width: 50%;
   min-width: 20rem;
 }
+@media only screen and (max-height: 925px) {
+  header .section1 .welcome-image {
+    display: none;
+  }
+}
 header .section1 .main-button {
   border-radius: 4px;
   background-color: rgb(255, 27, 39);
@@ -243,6 +273,7 @@ header .section1 .main-button {
   display: inline-block;
   position: relative;
   transition: 0.3s;
+  grid-area: a3;
 }
 @media screen and (max-height: 840px) {
   header .section1 .main-button {
@@ -305,8 +336,13 @@ header .section1 #scroll-down:hover {
   background: red;
   color: rgb(47, 47, 47);
 }
-@media screen and (max-width: 768px) {
+@media only screen and (max-height: 925px) {
   header .section1 #scroll-down {
     display: none;
   }
 }
+@media screen and (max-width: 768px) {
+  header .section1 #scroll-down {
+    display: none;
+  }
+}/*# sourceMappingURL=index.css.map */
