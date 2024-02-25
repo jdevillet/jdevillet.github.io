@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "rubik";
-  src: url(/assets/fonts/Rubik-VariableFont_wght.ttf);
+  src: url(../fonts/Rubik-VariableFont_wght.ttf);
 }
 *,
 *::before,
@@ -124,7 +124,7 @@ h4 {
 }
 
 header {
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -186,7 +186,7 @@ header #navbar ul li:not(:last-of-type):hover:after {
   transform-origin: bottom right;
 }
 header .section1 {
-  height: 100vh;
+  height: 70vh;
   max-width: 100%;
   display: flex;
   flex-direction: column;
@@ -195,6 +195,12 @@ header .section1 {
   justify-items: center;
   background: url(/assets/img/augu-mecha.webp) center/cover;
   padding: 5rem 0 5rem 0;
+  position: relative;
+}
+@media only screen and (max-height: 925px) {
+  header .section1 {
+    padding: 0;
+  }
 }
 @media only screen and (max-height: 500px) {
   header .section1 {
@@ -227,7 +233,7 @@ header .section1 #logo {
   min-height: 5rem;
   height: 15rem;
   border-radius: 1rem;
-  background: url(/assets/img/logogarage.webp) center/cover;
+  background: url(/assets/img/logogarage.svg) center/cover;
   grid-area: a1;
 }
 @media only screen and (max-height: 925px) {
@@ -274,13 +280,19 @@ header .section1 p {
   color: rgb(241, 241, 241);
   font-size: 4rem;
   margin: 0 3rem;
-  max-width: 14ch;
+  max-width: 12ch;
   grid-area: a2;
   text-shadow: 0 0 3px #000;
 }
 @media screen and (max-width: 1200px) {
   header .section1 p {
     font-size: 3rem;
+    margin: 0;
+  }
+}
+@media screen and (max-height: 925px) {
+  header .section1 p {
+    font-size: 2.4rem;
     margin: 0;
   }
 }
@@ -291,7 +303,7 @@ header .section1 p {
 }
 @media screen and (max-width: 580px) {
   header .section1 p {
-    max-width: 14ch;
+    max-width: 12ch;
   }
 }
 @media screen and (max-width: 430px) {
@@ -403,117 +415,23 @@ header .section1 #scroll-btn:hover {
   }
 }
 
-.services {
+.servicesV2 {
+  min-height: 50rem;
+  margin: 2rem 2rem 0;
+}
+.servicesV2 h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.servicesV2 .container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  height: auto;
-  min-height: 25rem;
-  width: 100%;
-  background: rgb(47, 47, 47);
-  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
   justify-items: center;
-  padding: 3rem 2rem;
+  gap: 1rem;
 }
-@media only screen and (max-width: 1010px) {
-  .services {
-    display: flex;
-    flex-direction: column;
-  }
+.appointment {
+  margin-top: 2rem;
 }
-@media only screen and (max-width: 600px) {
-  .services {
-    padding: 0 1rem;
-  }
-}
-.services .container {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-  background: rgb(255, 27, 39);
-  width: auto;
-  max-width: 90%;
-  height: auto;
-  margin: 1rem 0;
-  max-height: 20rem;
-  border-radius: 0.5rem;
-}
-@media only screen and (max-width: 1010px) {
-  .services .container {
-    display: grid;
-    grid-template-rows: 1fr;
-    max-height: 15rem;
-    grid-template-columns: 40% 60%;
-    justify-items: center;
-  }
-}
-@media only screen and (max-width: 796px) {
-  .services .container {
-    display: flex;
-    flex-direction: column;
-    margin: 1rem 0;
-    max-height: 20rem;
-  }
-}
-.services .container .service-center {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
-}
-.services .container .service-center .service1 {
-  font-size: 1.5rem;
-  overflow: hidden;
-  letter-spacing: 1px;
-  font-weight: 600;
-  padding: 0.6rem;
-}
-@media only screen and (max-width: 1880px) {
-  .services .container .service-center .service1 {
-    font-size: 1.5rem;
-    max-width: 20ch;
-  }
-}
-@media only screen and (max-width: 1400px) {
-  .services .container .service-center .service1 {
-    font-size: 1.4rem;
-  }
-}
-@media only screen and (max-width: 1010px) {
-  .services .container .service-center .service1 {
-    font-size: 1.5rem;
-  }
-}
-@media only screen and (max-width: 796px) {
-  .services .container .service-center .service1 {
-    max-width: 100%;
-  }
-}
-@media only screen and (max-width: 367px) {
-  .services .container .service-center .service1 {
-    font-size: 1.2rem;
-  }
-}
-.services .container .img1,
-.services .container .img2,
-.services .container .img3 {
-  height: 20rem;
-  width: 30rem;
-  max-height: 15rem;
-}
-.services .container .img1 {
-  background: url(/assets/img/brake-Z3.webp) center/cover;
-}
-.services .container .img2 {
-  background: url(/assets/img/entretien-exemple.jpeg) center/cover;
-}
-.services .container .img3 {
-  background: url(/assets/img/tire1.webp) center/cover;
-}
-
 .appointment h2 {
   font-size: 3rem;
   margin-bottom: 2rem;
@@ -611,6 +529,9 @@ header .section1 #scroll-btn:hover {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(5.1rem, 1fr));
   align-items: center;
+}
+.appointment .contact .payment .payment-methods .euroNote {
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(90deg) brightness(80%) contrast(119%);
 }
 
 footer {
