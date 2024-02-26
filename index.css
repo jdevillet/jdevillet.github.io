@@ -1,4 +1,4 @@
-@charset "UTF-8";
+c:\Users\Bebou\Desktop\Code\garagedevillet-v2\index.html@charset "UTF-8";
 @font-face {
   font-family: "rubik";
   src: url(../fonts/Rubik-VariableFont_wght.ttf);
@@ -14,6 +14,15 @@
   margin: 0;
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 body {
@@ -96,7 +105,8 @@ h4 {
   font-size: 1.1rem;
 }
 
-#scroll-btn, .down {
+#scroll-btn,
+.down {
   position: absolute;
   bottom: 2rem;
   font-size: 1.5rem;
@@ -107,20 +117,56 @@ h4 {
   transform: translateX(-50%);
   left: 50%;
 }
-#scroll-btn:hover, .down:hover {
+#scroll-btn:hover,
+.down:hover {
   cursor: pointer;
   background: red;
   color: rgb(47, 47, 47);
 }
 @media only screen and (max-height: 925px) {
-  #scroll-btn, .down {
+  #scroll-btn,
+  .down {
     display: none;
   }
 }
 @media screen and (max-width: 768px) {
-  #scroll-btn, .down {
+  #scroll-btn,
+  .down {
     display: none;
   }
+}
+
+.rdvBTN {
+  background: rgb(255, 27, 39);
+  width: 100%;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  gap: 0.5rem;
+  align-items: center;
+  text-align: center;
+}
+
+.hoverBTN {
+  transition: 0.2s;
+}
+.hoverBTN:hover {
+  filter: brightness(70%);
+}
+
+.active_tab {
+  background-color: rgb(255, 27, 39);
+}
+
+.active {
+  display: block;
+}
+
+.hidden {
+  display: none;
 }
 
 header {
@@ -337,6 +383,7 @@ header .section1 .main-button {
   position: relative;
   transition: 0.3s;
   grid-area: a3;
+  cursor: pointer;
 }
 @media screen and (max-height: 840px) {
   header .section1 .main-button {
@@ -388,47 +435,96 @@ header .section1 .main-button:hover:after {
   opacity: 1;
   text-indent: 0.5rem;
 }
-header .section1 #scroll-btn {
-  position: absolute;
-  bottom: 2rem;
-  font-size: 1.5rem;
-  color: rgb(241, 241, 241);
-  padding: 0.5rem;
-  border-radius: 99rem;
-  transition: 180ms ease-in-out;
-  transform: translateX(-50%);
-  left: 50%;
-}
-header .section1 #scroll-btn:hover {
-  cursor: pointer;
-  background: red;
-  color: rgb(47, 47, 47);
-}
-@media only screen and (max-height: 925px) {
-  header .section1 #scroll-btn {
-    display: none;
-  }
-}
-@media screen and (max-width: 768px) {
-  header .section1 #scroll-btn {
-    display: none;
-  }
-}
 
 .servicesV2 {
-  min-height: 50rem;
   margin: 2rem 2rem 0;
+  z-index: 1;
+  overflow: hidden;
 }
 .servicesV2 h2 {
   font-size: 3rem;
+}
+.servicesV2 .tabs_paragraph_wrapper {
+  margin-top: 2rem;
+  background-color: rgba(36, 36, 36, 0.641);
+  padding: 1rem;
+}
+.servicesV2 .tabs_paragraph_wrapper .tabs_paragraph {
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100rem;
+}
+.servicesV2 .tabs_paragraph_wrapper .tabs_paragraph .tabs_wrapper {
   margin-bottom: 2rem;
 }
-.servicesV2 .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
-  justify-items: center;
-  gap: 1rem;
+.servicesV2 .tabs_paragraph_wrapper .tabs_paragraph .tabs_wrapper .tabs_inner .tabs_tabs {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
 }
+.servicesV2 .tabs_paragraph_wrapper .tabs_paragraph .tabs_wrapper .tabs_inner .tabs_tabs .tab {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5rem;
+  min-width: 15rem;
+  max-width: 25rem;
+}
+.servicesV2 .tabs_paragraph_wrapper .tabs_paragraph .tabs_wrapper .tabs_inner .tabs_tabs .tab button {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  -webkit-border-radius: 62.5rem;
+  -webkit-border-top-left-radius: 3.75rem;
+  -webkit-border-bottom-right-radius: 3.75rem;
+  border-radius: 62.5rem;
+  border-top-left-radius: 3.75rem;
+  border-bottom-right-radius: 3.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: background 250ms linear;
+}
+.servicesV2 .tabs_paragraph_wrapper .tabs_paragraph .tabs_wrapper .tabs_inner .tabs_tabs .tab button:hover:not(.active_tab) {
+  background-color: rgba(255, 75, 84, 0.824);
+}
+.servicesV2 .tabs_paragraph_wrapper .tabs_paragraph .tabs_wrapper .tabs_inner .tabs_tabs .tab button:focus {
+  background-color: rgba(255, 75, 84, 0.824);
+}
+.servicesV2 .tabs_paragraph_wrapper .tabs_paragraph .tabs_wrapper .tabs_inner .tabs_tabs .tab button .title {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.servicesV2 .tabs_paragraph_wrapper .tabs_paragraph .tab_content_wrapper .tab_content {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  min-height: 20rem;
+  margin: 2rem;
+}
+.servicesV2 .tabs_paragraph_wrapper .tabs_paragraph .tab_content_wrapper .tab_content img {
+  width: auto;
+  height: 100%;
+}
+.servicesV2 .tabs_paragraph_wrapper .tabs_paragraph .tab_content_wrapper .text_tab_content {
+  display: flex;
+  flex-direction: column;
+}
+.servicesV2 .tabs_paragraph_wrapper .tabs_paragraph .tab_content_wrapper .text_tab_content p {
+  color: rgb(241, 241, 241);
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+}
+
 .appointment {
   margin-top: 2rem;
 }
@@ -468,69 +564,31 @@ header .section1 #scroll-btn:hover {
   flex-direction: column;
   height: auto;
 }
-.appointment .contact .info-container .address a {
-  background: rgb(255, 27, 39);
-  width: 100%;
-  padding: 0.5rem 0;
-  display: flex;
-  justify-content: center;
-  border-radius: 0.5rem;
-  transition: 0.3s ease;
-  font-size: 1.1rem;
-  font-weight: 600;
-  gap: 0.5rem;
-  align-items: center;
-}
-.appointment .contact .info-container .address a:hover {
-  filter: brightness(70%);
-}
-.appointment .contact .info-container .phone h4 {
+.appointment .contact .phone h4 {
   margin-top: 0.6rem;
 }
-.appointment .contact .info-container .phone #whatsappImg {
-  width: 100%;
-  min-width: 10rem;
-  height: 3rem;
-  transition: 0.3s ease;
+.appointment .contact .phone #whatsappBtn {
+  background: rgb(37, 211, 102);
 }
-.appointment .contact .info-container .phone #whatsappImg:hover {
-  filter: brightness(70%);
-}
-.appointment .contact .mail h4 {
+.appointment .mail h4 {
   margin-top: 0.6rem;
 }
-.appointment .contact .mail #mailBtn {
-  background: rgb(255, 27, 39);
-  width: 100%;
-  padding: 0.5rem 0;
-  display: flex;
-  justify-content: center;
-  border-radius: 0.5rem;
-  transition: 0.3s ease;
-  font-size: 1.1rem;
-  font-weight: 600;
-  gap: 0.5rem;
-  align-items: center;
-}
-.appointment .contact .mail #mailBtn:hover {
-  filter: brightness(70%);
-}
-.appointment .contact .payment {
+.appointment .payment {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 @media screen and (max-width: 900px) {
-  .appointment .contact .payment {
+  .appointment .payment {
     margin: 0 1rem;
   }
 }
-.appointment .contact .payment .payment-methods {
+.appointment .payment .payment-methods {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(5.1rem, 1fr));
   align-items: center;
 }
-.appointment .contact .payment .payment-methods .euroNote {
+.appointment .payment .payment-methods .euroNote {
   filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(90deg) brightness(80%) contrast(119%);
 }
 
