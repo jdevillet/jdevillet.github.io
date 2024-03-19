@@ -441,6 +441,7 @@ header .section1 .main-button:hover:after {
 .servicesV2 {
   margin: 2rem 2rem 0;
   overflow: hidden;
+  font-family: "rubik", Verdana;
 }
 .servicesV2 h2 {
   font-size: 3rem;
@@ -605,6 +606,14 @@ header .section1 .main-button:hover:after {
           user-select: none;
   transition: 250ms;
 }
+.servicesV2 .tabs-container .pcss3t > label:last-of-type {
+  transition: 250ms;
+}
+@media screen and (max-width: 767px) {
+  .servicesV2 .tabs-container .pcss3t > label:last-of-type {
+    margin-bottom: 1rem;
+  }
+}
 .servicesV2 .tabs-container .pcss3t > label:hover {
   background: #000000;
 }
@@ -625,6 +634,25 @@ header .section1 .main-button:hover:after {
 .servicesV2 .tabs-container .pcss3t-theme-1 > label:hover {
   background: rgba(255, 75, 84, 0.824);
   opacity: 1;
+}
+.servicesV2 .tabs-container .pcss3t-theme-1 > label:hover:last-of-type {
+  background: rgb(54, 237, 161);
+}
+.servicesV2 .tabs-container .pcss3t-theme-1 > label:hover:last-of-type::after {
+  content: "Bientôt";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: -50%;
+  transform: translateX(50%);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border-radius: 62.5rem;
+  border-top-left-radius: 3.75rem;
+  border-bottom-right-radius: 3.75rem;
 }
 .servicesV2 .tabs-container .pcss3t-theme-1 > input:checked + label {
   margin-bottom: 0;
@@ -653,7 +681,7 @@ header .section1 .main-button:hover:after {
 }
 .servicesV2 .tabs-container .pcss3t > ul,
 .servicesV2 .tabs-container .pcss3t > ul > li {
-  height: 30rem;
+  height: 33rem;
 }
 
 .appointment {
