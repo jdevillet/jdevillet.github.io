@@ -713,12 +713,7 @@ header .section1 .main-button:hover:after {
   grid-template-columns: repeat(auto-fill, minmax(5.1rem, 1fr));
   align-items: center;
 }
-@media screen and (max-width: 680px) {
-  .appointment .payment .payment-methods {
-    display: flex;
-    width: 5rem;
-  }
-}
+
 .appointment .payment .payment-methods .euroNote {
   filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(90deg) brightness(80%) contrast(119%);
 }
