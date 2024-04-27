@@ -656,6 +656,9 @@ header .section1 .main-button:hover:after {
 
 .appointment {
   margin-top: 2rem;
+  i{
+    overflow: hidden;
+  }
 }
 .appointment h2 {
   font-size: 3rem;
