@@ -4,10 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Service de réparation, entretien automobile local situé à moins de 10 minutes d'Arlon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="index.css">
 
   <title>Garage Devillet</title>
 </head>
@@ -16,35 +17,7 @@
 
   <section class="page-max-width">
 
-    <header id="Bienvenue">
-
-      <nav id="navbar">
-
-        <ul>
-          <li>
-            <a class="nav-element" href="#Bienvenue">
-              Acceuil
-            </a>
-          </li>
-
-          <li>
-            <a class="nav-element" href="#services">
-              Services
-            </a>
-          </li>
-
-          <li>
-            <a class="nav-element" href="#appointment">
-              Contact
-            </a>
-          </li>
-
-          <li><a class="nav-element" href="https://www.facebook.com/devilletjoeri/" target="_blank">
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
-          </li>
-        </ul>
-      </nav>
+    <header id="welcome">
 
       <div class="section1">
         <div class="responsive-phone"></div>
@@ -67,6 +40,7 @@
 
 
 
+
         <div class="pcss3t pcss3t-effect-scale pcss3t-theme-1">
           <input type="radio" name="pcss3t" checked id="tab1" class="tab-content-first">
           <label for="tab1">Mécanique</label>
@@ -82,6 +56,7 @@
 
           <input type="radio" name="pcss3t" id="tab5" class="tab-content-5">
           <label for="tab5">Autres</label>
+
 
           <!-- <input type="radio" name="pcss3t" id="tab6" class="tab-content-last">
           <label for="tab6">Électrique</label> -->
@@ -196,36 +171,38 @@
         <div class="info-container">
 
           <div class="address contact-infos">
-            <h4 class="bold">Adresse</h4>
+            <h3 class="bold">Adresse</h3>
             <p>Route de Neufchâteau, 551
               <br>
               6700 Arlon
             </p>
 
-            <a class="rdvBTN hoverBTN" id="itineraryBtn" target="_blank"
+            <a class="rdvBTN hoverBTN" aria-label="Obtenir le trajet sur google maps" id="itineraryBtn" target="_blank"
               href="https://www.google.com/maps/dir//Garage+Devillet,+Rte+de+Neufch%C3%A2teau+551,+6700+Arlon/@49.6986485,5.7475847,17.25z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47eabb2719b540d9:0x2c494c5be1884f54!2m2!1d5.7419073!2d49.6989611!3e0?entry=ttu"><i
                 class="fa-solid fa-location-dot"></i> Voir l'itinéraire</a>
           </div>
 
           <div class="phone contact-infos">
-            <h4 class="bold">Téléphone</h4>
-            <a class="hoverBTN" id="phone-number" href="tel:+32471203473">0471/20.34.73</a>
+            <h3 class="bold">Téléphone</h3>
+            <a class="hoverBTN" aria-label="appeler le numéro de téléphone" id="phone-number"
+              href="tel:+32471203473">0471/20.34.73</a>
             <br>
 
-            <a class="rdvBTN hoverBTN" id="whatsappBtn" target="_blank" href="https://wa.me/32471203473"><i <i
-                class="fa-brands fa-whatsapp"></i> Contacter sur Whatsapp</a>
+            <a class="rdvBTN hoverBTN" aria-label="contacter sur whatsapp" id="whatsappBtn" target="_blank"
+              href="https://wa.me/32471203473"><i <i class="fa-brands fa-whatsapp"></i> Contacter sur Whatsapp</a>
           </div>
 
           <div class="mail contact-infos">
-            <h4 class="bold">Email</h4>
+            <h3 class="bold">Email</h3>
             <p>garage.devillet.heinsch@gmail.com</p>
-            <a class="rdvBTN hoverBTN" id="mailBtn" href=mailto:garage.devillet.heinsch@gmail.com?subject=Rendez-vous><i
+            <a class="rdvBTN hoverBTN" aria-label="contacter par mail" id="mailBtn"
+              href=mailto:garage.devillet.heinsch@gmail.com?subject=Rendez-vous><i
                 class="fa-solid fa-envelope"></i>Contacter par email</a>
           </div>
         </div>
 
         <div class="schedule">
-          <h4 class="bold">Horaires</h4>
+          <h3 class="bold">Horaires</h3>
           <div class="days">
             <div class="day">
               <p>Lundi</p>
@@ -276,12 +253,28 @@
 
     <footer>
 
-      <a href="#Bienvenue"><i id="scroll-btn" class="down fa-solid fa-angles-up"></i></a>
+      <div class="footer_infos">
+
+        <img src="./assets/img/logogarage.svg" alt="Logo_GarageDevillet">
+
+
+        <a href="#welcome" aria-label="retourner en haut de la page"><i id="scroll-btn"
+            class="down fa-solid fa-angles-up"></i></a>
+
+        <a class="nav-element" aria-label="consulter la page facebook" href="https://www.facebook.com/devilletjoeri/"
+          target="_blank">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+      </div>
+
+      <p>Copyright ©GarageDevillet </p>
+      <a class="legal" aria-label="consulter les mentions légales" href="./mentions_legales.html">Mentions légales</a>
+
+
     </footer>
 
   </section>
 
-  <script src="index.js"></script>
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "rubik";
-  src: url(/assets/fonts/Rubik-VariableFont_wght.ttf);
+  src: url(./assets/fonts/Rubik-VariableFont_wght.ttf);
 }
 *,
 *::before,
@@ -123,12 +123,6 @@ h4 {
   background: red;
   color: rgb(47, 47, 47);
 }
-@media only screen and (max-height: 925px) {
-  #scroll-btn,
-  .down {
-    display: none;
-  }
-}
 @media screen and (max-width: 768px) {
   #scroll-btn,
   .down {
@@ -148,13 +142,14 @@ h4 {
   gap: 0.5rem;
   align-items: center;
   text-align: center;
+  text-shadow: 1px 1px rgb(23, 20, 21);
 }
 
 .hoverBTN {
   transition: 0.2s;
 }
 .hoverBTN:hover {
-  filter: brightness(70%);
+  filter: brightness(50%);
 }
 
 .active_tab {
@@ -241,7 +236,7 @@ header .section1 {
   justify-content: space-around;
   align-items: center;
   justify-items: center;
-  background: url(/assets/img/augu-mecha.webp) center/cover;
+  background: url(/assets/img/carjeep.webp) center/cover fixed;
   padding: 5rem 0 5rem 0;
   position: relative;
 }
@@ -656,6 +651,7 @@ header .section1 .main-button:hover:after {
 
 .appointment {
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 .appointment h2 {
   font-size: 3rem;
@@ -706,6 +702,11 @@ header .section1 .main-button:hover:after {
 .appointment .mail h4 {
   margin-top: 0.6rem;
 }
+.appointment .payment {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
 @media screen and (max-width: 900px) {
   .appointment .payment {
     margin: 0 1rem;
@@ -721,6 +722,70 @@ header .section1 .main-button:hover:after {
 }
 
 footer {
-  height: 5rem;
+  max-height: 15rem;
+  background-color: rgb(31, 31, 31);
   position: relative;
+}
+footer::before {
+  content: "";
+  position: absolute;
+  height: 0.1rem;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgb(149, 149, 149);
+  background: linear-gradient(90deg, rgba(149, 149, 149, 0) 0%, rgb(149, 149, 149) 50%, rgba(149, 149, 149, 0) 100%);
+}
+footer .footer_infos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+}
+footer .footer_infos img {
+  max-width: 10rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+footer .footer_infos i {
+  overflow: hidden;
+  font-size: 2rem;
+  transition: 200ms linear;
+  padding: 0.5rem;
+  border-radius: 99rem;
+}
+footer .footer_infos i:hover {
+  background: rgb(241, 241, 241);
+}
+footer .footer_infos i:hover::before {
+  color: rgb(47, 47, 47);
+  transition: 200ms ease-in-out;
+}
+footer p {
+  display: inline;
+  margin: 2rem 0rem 0rem 0.3rem;
+  font-size: 0.8rem;
+}
+footer .legal {
+  float: right;
+  margin: 0 0.3rem 0 0;
+  font-size: 0.8rem;
+  display: inline;
+  position: relative;
+}
+footer .legal::after {
+  content: "";
+  position: absolute;
+  height: 0.07rem;
+  width: 100%;
+  background: rgb(241, 241, 241);
+  bottom: 0;
+  left: 0;
+}
+footer .legal:hover {
+  color: rgb(255, 27, 39);
+}
+footer .legal:hover::after {
+  background: rgb(255, 27, 39);
 }/*# sourceMappingURL=index.css.map */
