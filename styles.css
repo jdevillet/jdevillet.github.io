@@ -693,13 +693,16 @@ header .section1 .main-button:hover:after {
   flex-direction: column;
   height: auto;
 }
-.appointment .contact .phone h4 {
+.appointment .contact .phone h3 {
   margin-top: 0.6rem;
+}
+.appointment .contact .phone #phone-number {
+  font-size: 1.2rem;
 }
 .appointment .contact .phone #whatsappBtn {
   background: rgb(37, 211, 102);
 }
-.appointment .mail h4 {
+.appointment .mail h3 {
   margin-top: 0.6rem;
 }
 .appointment .payment {
@@ -764,12 +767,12 @@ footer .footer_infos i:hover::before {
 }
 footer p {
   display: inline;
-  margin: 2rem 0rem 0rem 0.3rem;
+  margin: 2rem 0rem 0.9rem 1rem;
   font-size: 0.8rem;
 }
 footer .legal {
   float: right;
-  margin: 0 0.3rem 0 0;
+  margin: 0 1rem 0 0;
   font-size: 0.8rem;
   display: inline;
   position: relative;
@@ -788,4 +791,31 @@ footer .legal:hover {
 }
 footer .legal:hover::after {
   background: rgb(255, 27, 39);
+}
+
+.legal_notice a {
+  border-radius: 4px;
+  background-color: rgb(255, 27, 39);
+  letter-spacing: 0.5px;
+  border: none;
+  color: rgb(241, 241, 241);
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 0.5rem 0 0.5rem 0;
+  width: 20rem;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+  display: inline-block;
+  position: relative;
+  transition: 0.3s;
+  margin: 1rem 0 0 1rem;
+}
+.legal_notice a:hover {
+  filter: brightness(50%);
+}
+.legal_notice .mention_container {
+  margin: 2rem 0 0 2rem;
+  padding: 1rem;
+  max-width: 30rem;
+  background: rgb(61, 61, 61);
+  border-radius: 1.4rem;
 }/*# sourceMappingURL=index.css.map */
